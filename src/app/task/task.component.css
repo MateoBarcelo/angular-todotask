@@ -1,0 +1,27 @@
+.container {
+    width: 70%;
+    height: 100%;
+    padding:20px;
+    background-color: #E5E9F2;
+    margin-top: 1%;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.completed {
+    font-size: x-large;
+    position:absolute;
+    display:flex;
+}
+
+.content {
+    margin-left: 4%;
+    font-size: large;
+    line-height: 12px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+}

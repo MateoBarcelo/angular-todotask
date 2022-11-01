@@ -1,0 +1,28 @@
+.container {
+    height: 100%;
+    width: 7%;
+    top:0;
+    left:0;
+    display: flex;
+    position:fixed;
+    background-color: #274696;
+}
+
+
+.sidenav {
+    position:relative;
+    margin:0 auto;
+}
+
+.addicon {
+    display: block;
+    font-size: 35px;
+    color:#E5E9F2
+}
+.baricon {
+    display:block;
+    font-size: 35px;
+    color: #E5E9F2
+}
+
+

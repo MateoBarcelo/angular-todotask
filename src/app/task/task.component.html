@@ -1,0 +1,22 @@
+<div class="container">
+
+    <div class="completed">
+        <div *ngIf="task.completed">
+            <fa-icon [icon] = "checkIcon"></fa-icon>
+        </div>
+        <div *ngIf="!task.completed">
+            <fa-icon [icon] = "uncheckIcon"></fa-icon>
+        </div>
+    </div>
+    <div class="content">
+        {{task.content}}
+    </div>
+    <div class="buttons">
+        <div class="deletebutton">
+            <fa-icon [icon] = "deleteIcon"></fa-icon>
+        </div>
+        <div class="editbutton">
+            <fa-icon [icon] = "editIcon"></fa-icon>
+        </div>
+    </div>
+</div>
