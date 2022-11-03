@@ -1,4 +1,7 @@
 <div>
-    <app-task *ngFor="let task of tasks" [task] = task></app-task>
+    <app-task *ngFor="let task of tasks" [task] = task 
+    (oncheck)="onCheck($event)"
+    (ondelete)="onDelete($event)"
+    (onedit)="onEdit($event)"></app-task>
 </div>
 

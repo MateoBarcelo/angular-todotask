@@ -1,6 +1,6 @@
 <div class="container">
 
-    <div class="completed">
+    <div class="completed" (click) = "onCheck(task)">
         <div *ngIf="task.completed">
             <fa-icon [icon] = "checkIcon"></fa-icon>
         </div>
@@ -9,13 +9,18 @@
         </div>
     </div>
     <div class="content">
-        {{task.content}}
+        <div *ngIf="!task.isEditing">
+            {{task.content}}
+        </div>
+        <div *ngIf="task.isEditing">
+            <input #box type="text" placeholder="put your task here" (keyup.enter)="onKey(box.value,task)" [(ngModel)] = "task.content">
+        </div>
     </div>
     <div class="buttons">
-        <div class="deletebutton">
+        <div class="deletebutton" (click) = onDelete(task)>
             <fa-icon [icon] = "deleteIcon"></fa-icon>
         </div>
-        <div class="editbutton">
+        <div class="editbutton" (click) = onEdit(task)>
             <fa-icon [icon] = "editIcon"></fa-icon>
         </div>
     </div>
