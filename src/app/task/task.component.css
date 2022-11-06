@@ -18,10 +18,29 @@
 
 .content {
     margin-left: 4%;
-    width: 300%;
+    width: 400%;
     font-size: large;
     line-height: 12px;
     overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    position: relative;
+
+}
+
+.content ::after {
+    content:"";
+    position:absolute;
+    right: -3px;
+    height:100%;
+    width:6rem;
+    background-image: linear-gradient(to right, transparent, #E5E9F2);
+    pointer-events: none;
+}
+
+.contentcompleted {
+    text-decoration: line-through;
+    color: #787b85
 }
 
 .buttons {

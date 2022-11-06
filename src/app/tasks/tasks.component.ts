@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DoTask } from '../datamodels/task';
+import { AddtaskService } from '../services/addtask.service';
 
 @Component({
   selector: 'app-tasks',
@@ -8,8 +9,9 @@ import { DoTask } from '../datamodels/task';
 })
 export class TasksComponent implements OnInit {
 
-  constructor() { }
-  tasks:DoTask[] = [{id:0,content:"test",completed:true,isEditing:false}]
+  constructor(private addService : AddtaskService) { }
+
+  tasks:DoTask[] = this.addService.getTasks()
 
   ngOnInit(): void {
     this.tasks.push({id:1,content:"test2",completed:true,isEditing:false})
@@ -26,7 +28,6 @@ export class TasksComponent implements OnInit {
   onEdit(taskemit:DoTask) {
     taskemit.isEditing = true
   }
-
   
 
 

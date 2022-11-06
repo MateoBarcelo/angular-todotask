@@ -1,7 +1,7 @@
 <div class="container">
 
     <div class="completed" (click) = "onCheck(task)">
-        <div *ngIf="task.completed">
+        <div *ngIf="task.completed" [ngStyle] = "{'color':'#646874'}">
             <fa-icon [icon] = "checkIcon"></fa-icon>
         </div>
         <div *ngIf="!task.completed">
@@ -9,7 +9,7 @@
         </div>
     </div>
     <div class="content">
-        <div *ngIf="!task.isEditing">
+        <div *ngIf="!task.isEditing" [ngClass] = "{'contentcompleted':task.completed}">
             {{task.content}}
         </div>
         <div *ngIf="task.isEditing">

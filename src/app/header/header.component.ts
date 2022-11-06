@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import {faCirclePlus} from '@fortawesome/free-solid-svg-icons'
 import {faBarChart} from '@fortawesome/free-regular-svg-icons'
+import { AddtaskService } from '../services/addtask.service';
+import { DoTask } from '../datamodels/task';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -8,12 +10,21 @@ import {faBarChart} from '@fortawesome/free-regular-svg-icons'
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  @Output() onaddtask = new EventEmitter();
+
+  constructor(private addService : AddtaskService) { }
 
   chartbar=faBarChart;
   circleplus = faCirclePlus;
   ngOnInit(): void {
     
+  }
+
+  onAddTask() {
+    const task = new DoTask()
+    task.isEditing = true;
+    this.addService.addTask(task)
+    console.log("test")
   }
 
 }
