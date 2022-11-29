@@ -23,8 +23,8 @@ export class HeaderComponent implements OnInit {
   onAddTask() {
     const task = new DoTask()
     task.isEditing = true;
+    task.id = this.addService.getTasks().length + 1;
     this.addService.addTask(task)
-    console.log("test")
   }
 
 }

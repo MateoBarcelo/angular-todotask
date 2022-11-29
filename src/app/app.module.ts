@@ -8,13 +8,17 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { TasksComponent } from './tasks/tasks.component';
 import { TaskComponent } from './task/task.component';
 import { FormsModule } from '@angular/forms';
+import { CategoriesComponent } from './categories/categories.component';
+import { CategoryComponent } from './category/category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     TasksComponent,
-    TaskComponent
+    TaskComponent,
+    CategoriesComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,7 @@
     display: flex;
     position:fixed;
     background-color: #274696;
+    box-shadow: 2px 1px 3px 0px #CCCCCC;
 }
 
 

@@ -22,7 +22,7 @@ export class TasksComponent implements OnInit {
   }
 
   onDelete(taskemit:DoTask) {
-    this.tasks = this.tasks.filter(task => task.content != taskemit.content)
+    this.tasks = this.tasks.filter(task => task.id != taskemit.id)
   }
 
   onEdit(taskemit:DoTask) {
