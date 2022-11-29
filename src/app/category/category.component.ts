@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Category } from '../datamodels/category';
 
 @Component({
   selector: 'app-category',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  @Input() category:Category = new Category()
 
 }
